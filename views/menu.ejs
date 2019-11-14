@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <button onclick="MovetoReg()">Register</button>
+    <button onclick="MovetoLogin()">Login</button>
+    <button onclick="Logout()">Logout</button>
+    <button onclick="MovetounReg()">unRegister</button>
+    <button onclick="MovetoWallet_Generate()">Wallet Generate</button>
+    <button onclick="MovetoWallet_Show()">Wallet Show</button>
+    <button onclick="game()">Game</button>
+  </body>
+  <script>
+    function MovetoReg() {
+      location.href="/reg"
+    }
+    function MovetounReg() {
+      location.href="/unreg"
+    }
+    function MovetoLogin() {
+      location.href="/login"
+    }
+    function Logout() {
+      location.href="/logout"
+    }
+    function MovetoWallet_Generate() {
+      location.href="/wallet"
+    }
+    function MovetoWallet_Show() {
+      location.href="/wallet/show"
+    }
+    function game() {
+      location.href="/game"
+    }
+  </script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+  <p>
+    <%= title %>
+  </p>
+  <div>
+    <form action="/wallet/save" method="POST" enctype="application/x-www-form-urlencoded">
+      <label>private key:</label>
+      <textarea name="pri_key" id="pri_key" rows="10" class="form-control" readonly><%= pri_key %></textarea>
+      <br />
+      <label>public key:</label>
+      <textarea name="pub_key" id="pub_key" rows="5" class="form-control" readonly><%= pub_key %></textarea>
+      <button type="submit">SAVE</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> RDT
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <p><%= sys_platform %></p>
+  <p><%= client_Info %></p>
+  <div>
+    <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+      <input type="text" name="username" required="required"/>
+      <input type="text" name="password" required="required"/>
+      <button type="submit">Login</button>
+    </form>
+    <!-- <a href="javascript:runProgram()">Run program</a> -->
+    <a href="webrun:C:\\pika.exe">Go</a>
+  </div>
+</body>
+<script>
+console.log(window.location.pathname);
+function runProgram() {
+  var shell = new ActiveXObject("test5.exe");
+  var file = "\\"C:\\pika.exe" ";
+  shell.Run(file)
+}
+</script>
+
+</html>

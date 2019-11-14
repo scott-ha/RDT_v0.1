@@ -1,0 +1,25 @@
+{
+  "name": "rdt-platform-v0.1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "supervisor ./bin/www"
+  },
+  "dependencies": {
+    "JSON": "^1.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.17.0",
+    "express-useragent": "^1.0.13",
+    "http-errors": "~1.6.3",
+    "https": "^1.0.0",
+    "mime": "^2.4.4",
+    "morgan": "~1.9.1",
+    "request": "^2.88.0",
+    "supervisor": "^0.12.0",
+    "user-info": "^2.0.0",
+    "useragent": "^2.3.0"
+  }
+}
