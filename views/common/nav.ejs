@@ -5,21 +5,37 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!--to services section id = #services-->
       <ul class="navbar-nav ml-auto my-2 my-lg-0">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          <a class="nav-link js-scroll-trigger" href="/gallery">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          <a class="nav-link js-scroll-trigger" href="/company">Company</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="nav-link js-scroll-trigger" href="/tech">Tech</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          <a class="nav-link js-scroll-trigger" href="/product">Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" onclick="MovetoGallery()">Video</a>
+          <a class="nav-link js-scroll-trigger" href="/game">Game</a>
+        </li>
+        <% if(session) { %>
+          <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/reg">user</a>
+        </li>
+        <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/reg">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+        </li>
+        <% } %>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/logout">Logout</a>
         </li>
       </ul>
     </div>

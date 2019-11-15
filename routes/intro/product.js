@@ -7,13 +7,10 @@ router.get('/', function(req, res, next) {
   // cookie from req.headers.cookie
   var user_name = req.headers.cookie;
   var session = req.headers.session;
-  if (!session) {
-    console.log(session);
+  if(!session) {
+
   }
-  res.render('index', {
-    title: 'RDT',
-    session: session
-  });
+  res.render('intro/product', { title: 'RDT' });
 });
 
 module.exports = router;

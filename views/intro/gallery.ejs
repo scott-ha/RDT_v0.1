@@ -2,29 +2,32 @@
 <html lang="en">
 
 <head>
-  <% include ./common/head %>
+  <% include ../common/head %>
 </head>
 
 <body id="page-top">
-  <% include ./common/nav %>
+  <!-- Navigation -->
+  <% include ../common/nav %>
 
   <!-- Masthead -->
   <header class="masthead">
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">WE DESIGN YOUR LIFE WITH REAL CYCLING</h1>
+          <h1 class="text-uppercase text-white font-weight-bold">Gallery</h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">-REALDESIGNTECH-</p>
+          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
         </div>
       </div>
     </div>
   </header>
 
+
   <!-- About Section -->
+  <!--
   <section class="page-section bg-primary" id="about">
     <div class="container">
       <div class="row justify-content-center">
@@ -32,14 +35,14 @@
           <h2 class="text-white mt-0">We've got what you need!</h2>
           <hr class="divider light my-4">
           <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
         </div>
       </div>
     </div>
   </section>
-
+  -->
   <!-- Services Section -->
+  <!--
   <section class="page-section" id="services">
     <div class="container">
       <h2 class="text-center mt-0">At Your Service</h2>
@@ -76,14 +79,16 @@
       </div>
     </div>
   </section>
-
+  <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+  <iframe width="360" height="202" src="https://www.youtube.com/embed/o_cdhpfEmLM" frameborder="0" allowfullscreen></iframe>
+  -->
   <!-- Portfolio Section -->
   <section id="portfolio">
     <div class="container-fluid p-0">
       <div class="row no-gutters">
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+          <a class="portfolio-box" href="https://www.youtube.com/watch?v=jAEdoDP3NEc">
+            <img class="img-fluid" src="img/video_img/img_video1.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
                 Category
@@ -95,7 +100,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+          <a class="portfolio-box" href="https://www.youtube.com/watch?v=lfNW3sqU4I4">
             <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
@@ -108,7 +113,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+          <a class="portfolio-box" href="https://www.youtube.com/watch?v=jAEdoDP3NEc">
             <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
@@ -121,7 +126,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+          <a class="portfolio-box" href="https://www.youtube.com/watch?v=xG0Xky4vmAw">
             <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="project-category text-white-50">
@@ -172,10 +177,13 @@
   </section>
 
   <!-- Contact Section -->
-  <% include ./common/contact %>
+  <% include ../common/contact %>
 
   <!-- Footer -->
-  <% include ./common/footer %>
+  <footer>
+    <% include ../common/footer %>
+  </footer>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -186,6 +194,7 @@
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Custom scripts for this template -->
+  <!-- important -->
   <script src="js/creative.min.js"></script>
 
 </body>
