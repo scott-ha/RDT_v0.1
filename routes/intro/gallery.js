@@ -4,13 +4,14 @@ var router = express.Router();
 // var user;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // cookie from req.headers.cookie
-  var user_name = req.headers.cookie;
-  var session = req.headers.session;
-  if(!session) {
-
-  }
-  res.render('intro/gallery', { title: 'RDT' });
+  // cookie from req.cookies
+  var user_name = req.cookies.MY_USER;
+  var session = req.session.logined;
+  res.render('intro/gallery', {
+    title: 'RDT',
+    session: session,
+    user_name: user_name
+  });
 });
 
 module.exports = router;

@@ -5,7 +5,8 @@ var request = require('request');
 /* GET home page. */
 // register
 router.get('/', function(req, res, next) {
-  if (req.session.logined == false) {
+  var session = req.session.logined;
+  if (!session) {
     res.redirect('/')
   } else {
     res.render('unregister', { title: 'unreg' });
@@ -36,7 +37,7 @@ router.post('/', function (req, res) {
       if(res_data.rcode == 'ok') {
         console.log("<--- log from : /unreg");
         console.log("unRegister Success");
-        
+
         // set session logined = false
         // clear cookies
         res.redirect('/logout');

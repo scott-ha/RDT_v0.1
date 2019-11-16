@@ -5,7 +5,8 @@ var request = require('request');
 /* GET home page. */
 // register
 router.get('/', function(req, res, next) {
-  if (req.session.logined == true) {
+  var session = req.session.logined;
+  if (session) {
     res.redirect('/')
   } else {
     res.render('register', { title: 'REG' });

@@ -5,7 +5,7 @@ var router = express.Router();
 // need to check session
 
 router.get('/', function(req, res, next) {
-  // set session logined = false
+  // session false
   req.session.logined = false;
   // clear cookies
   res.clearCookie('MY_USER').redirect('/');

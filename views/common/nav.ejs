@@ -7,6 +7,21 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <!--to services section id = #services-->
       <ul class="navbar-nav ml-auto my-2 my-lg-0">
+        <% if(session) { %>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/reg"><%= user_name %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/logout">Logout</a>
+        </li>
+        <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/reg">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/login">Login</a>
+        </li>
+        <% } %>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/gallery">Gallery</a>
         </li>
@@ -21,21 +36,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/game">Game</a>
-        </li>
-        <% if(session) { %>
-          <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/reg">user</a>
-        </li>
-        <% } else { %>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/reg">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/login">Login</a>
-        </li>
-        <% } %>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/logout">Logout</a>
         </li>
       </ul>
     </div>

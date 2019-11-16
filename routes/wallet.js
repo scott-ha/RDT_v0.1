@@ -8,7 +8,8 @@ var request = require('request');
 
 router.get('/', function(req, res, next) {
   var user_name = req.cookies.MY_USER;
-  if (req.session.logined == false) {
+  var session = req.session.logined;
+  if (!session) {
     res.redirect('/')
   } else {
     res.render('wallet_generate', {

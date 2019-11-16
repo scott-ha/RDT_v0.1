@@ -6,21 +6,22 @@ var request = require('request');
 // login
 // need to check session
 
-var user;
+// var user;
 router.get('/', function(req, res, next) {
-  var user_name = req.cookies.MY_USER;
-  if (req.session.logined == true) {
+  // cookie from req.cookies
+  var session = req.session.logined;
+
+  if (session) {
     res.redirect('/')
   } else {
-    res.render('login', { title: 'RDT login' });
+    res.render('login', {
+      title: 'RDT login'
+    });
   }
 });
 
-router.post('/', function (req, res) {
-  var user_name = req.cookies.MY_USER;
-  // console.log(user_name);
-  // console.log(session);
-  // console.log(user_name);
+router.post('/', function(req, res) {
+
   var name = req.body.username;
   var password = req.body.password;
 
@@ -30,13 +31,13 @@ router.post('/', function (req, res) {
       "Content-Type": "application/json"
     },
     form: {
-      'username' : name,
-      'password' : password
+      'username': name,
+      'password': password
     }
-  }, function (error, response, body) {
+  }, function(error, response, body) {
     // response data
     var res_data = JSON.parse(body);
-    if(!error && response.statusCode == 200) {
+    if (!error && response.statusCode == 200) {
       if (res_data.rcode == 'ok') {
         console.log("<--- log from : /login");
         console.log("Login Success");
@@ -54,7 +55,9 @@ router.post('/', function (req, res) {
       } else {
         console.log("<--- log from : /login");
         console.log("Login failed");
-        res.render('login', {title: 'check your ID/PW'})
+        res.render('login', {
+          title: 'check your ID/PW'
+        })
       }
     } else if (error) {
       console.log(error);
