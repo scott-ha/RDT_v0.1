@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   if (!session) {
     res.redirect('/')
   } else {
-    res.render('unregister', { title: 'unreg' });
+    res.render('unregister', { title: 'RealDesignTech' });
   }
 });
 

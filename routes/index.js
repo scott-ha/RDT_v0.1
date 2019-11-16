@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   var user_name = req.cookies.MY_USER;
   var session = req.session.logined;
   res.render('index', {
-    title: 'RDT',
+    title: 'RealDesignTech',
     session: session,
     user_name: user_name
   });

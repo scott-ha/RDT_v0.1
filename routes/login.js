@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
     res.redirect('/')
   } else {
     res.render('login', {
-      title: 'RDT login'
+      title: 'RealDesignTech'
     });
   }
 });

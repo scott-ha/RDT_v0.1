@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     res.redirect('/')
   } else {
     res.render('wallet_generate', {
-      title: 'RDT wallet_generate'
+      title: 'RealDesignTech'
     });
   }
 });
