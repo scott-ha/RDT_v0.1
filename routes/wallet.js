@@ -82,7 +82,7 @@ router.post('/save', function(req, res, next) {
         console.log("-pri_key : ", pri_key);
         console.log("-pub_key : ", pub_key);
         // change to show
-        res.redirect('/');
+        res.redirect('/users');
       } else {
         console.log("<--- log from : /wallet/save");
         console.log("FAIL");

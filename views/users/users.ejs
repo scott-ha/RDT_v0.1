@@ -2,37 +2,38 @@
 <html lang="en">
 
 <head>
-  <% include ./common/head %>
+  <% include ../common/head %>
 </head>
 
 <body id="page-top">
-  <% include ./common/nav %>
+  <% include ../common/nav %>
 
   <!-- Masthead -->
   <header class="masthead">
-    <div>
-       <form action="/reg" method="POST" enctype="application/x-www-form-urlencoded">
-         <input type="text" name="username" required="required"/>
-         <input type="text" name="password" required="required"/>
-         <button type="submit">Register</button>
-       </form>
-   </div>
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
+        <div cålass="col-lg-10 align-self-end">
           <h1 class="text-uppercase text-white font-weight-bold">WE DESIGN YOUR LIFE WITH REAL CYCLING</h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">-REALDESIGNTECH-</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">users</a>
+          <!---특정 계정만 transaction, mining 할 수 있도록..-->
+          <!--transaction-->
+          <!--coin 객수 userlist에서 접속 user에 해당하는 것만 보여주면 된다..-->
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="/wallet">Wallet Generate</a>
+          <br />
+          <label>private key:</label>
+          <textarea name="pri_key" id="pri_key" rows="10" class="form-control" readonly><%= pri_key%></textarea>
+          <br />
+          <label>public key:</label>
+          <textarea name="pub_key" id="pub_key" rows="5" class="form-control" readonly><%= pri_key%></textarea>
         </div>
       </div>
     </div>
   </header>
-
   <!-- Footer -->
-  <% include ./common/footer %>
+  <% include ../common/footer %>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
