@@ -24,12 +24,14 @@ router.get('/', function(req, res, next) {
         if (res_data.rcode == 'ok') {
           console.log("-pri_key : ", res_data.rpri_key);
           console.log("-pub_key : ", res_data.rpub_key);
+
           res.render('users/users', {
             title: 'RealDesignTech',
             session: session,
             user_name: user_name,
             pri_key: res_data.rpri_key,
-            pub_key: res_data.rpub_key
+            pub_key: res_data.rpub_key,
+            coin: res_data.rcoin
           });
         }
       }

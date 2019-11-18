@@ -23,11 +23,12 @@
           <!--coin 객수 userlist에서 접속 user에 해당하는 것만 보여주면 된다..-->
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="/wallet">Wallet Generate</a>
           <br />
+          <h2><%= coin %></h2>
           <label>private key:</label>
-          <textarea name="pri_key" id="pri_key" rows="10" class="form-control" readonly><%= pri_key%></textarea>
+          <textarea name="pri_key" id="pri_key" rows="10" class="form-control" readonly><%= pri_key %></textarea>
           <br />
           <label>public key:</label>
-          <textarea name="pub_key" id="pub_key" rows="5" class="form-control" readonly><%= pri_key%></textarea>
+          <textarea name="pub_key" id="pub_key" rows="5" class="form-control" readonly><%= pub_key%></textarea>
         </div>
       </div>
     </div>
