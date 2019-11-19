@@ -8,7 +8,9 @@ var userInfo = require('user-info');
 // user-agent
 var useragent = require('express-useragent');
 // command for web launcher
-var cmd = "node public/game/Wiggle/dist-server/main.js";
+// game server 실행시 port 충돌 해결필요
+// 여기서 할거냐 game의 서버 실행 부분에서 해결할거냐!
+var cmd = "PORT=3100 node public/game/Wiggle/dist-server/main.js";
 
 var fs = require('fs');
 var path = require('path');
@@ -17,6 +19,9 @@ var mime = require('mime');
 /* GET home page. */
 // 직접 실행 수행
 router.get('/', function(req, res, next) {
+  res.render('game', {
+    title: 'RDT_game'
+  });
   exec(cmd, function (error, stdout, stderr) {
     console.log('stdout:', stdout);
     console.log('stderr:', stderr);
