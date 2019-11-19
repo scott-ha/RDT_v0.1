@@ -10,7 +10,7 @@ var useragent = require('express-useragent');
 // command for web launcher
 // game server 실행시 port 충돌 해결필요
 // 여기서 할거냐 game의 서버 실행 부분에서 해결할거냐!
-var cmd = "PORT=3100 node public/game/Wiggle/dist-server/main.js";
+var cmd = "PORT=40007 node public/game/Wiggle/dist-server/main.js";
 
 var fs = require('fs');
 var path = require('path');

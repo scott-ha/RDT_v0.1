@@ -26,7 +26,8 @@ server.get('/', function(req, res) {
   res.sendFile(INDEX);
 });
 server.use('/', _express.default.static(_path.default.join(__dirname, '../dist/')));
-var requestHandler = server.listen(PORT, function(err) {
+var requestHandler = server.listen(PORT, function() {
+  console.log('Game start 40007');
   return console.log("Listening on ".concat(PORT));
 });
 var io = (0, _socket.default)(requestHandler); // Game Instances
