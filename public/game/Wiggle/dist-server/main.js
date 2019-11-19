@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) {
 // EADDRINUSE
 
 // port test
-var PORT = process.env.PORT || 3003;
+var PORT = process.env.PORT || 40007;
 
 var INDEX = _path.default.join(__dirname, '../dist/index.html'); // define routes and socket
 
