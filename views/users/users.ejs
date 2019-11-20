@@ -3,6 +3,7 @@
 
 <head>
   <% include ../common/head %>
+
 </head>
 
 <body id="page-top">
@@ -21,14 +22,42 @@
           <!---특정 계정만 transaction, mining 할 수 있도록..-->
           <!--transaction-->
           <!--coin 객수 userlist에서 접속 user에 해당하는 것만 보여주면 된다..-->
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="/wallet">Wallet Generate</a>
-          <br />
-          <h2><%= coin %></h2>
-          <label>private key:</label>
-          <textarea name="pri_key" id="pri_key" rows="10" class="form-control" readonly><%= pri_key %></textarea>
-          <br />
-          <label>public key:</label>
-          <textarea name="pub_key" id="pub_key" rows="5" class="form-control" readonly><%= pub_key%></textarea>
+
+          <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">user_info</li>
+            <li class="tab-link" data-tab="tab-2">wallet_info</li>
+            <li class="tab-link" data-tab="tab-3">my transaction</li>
+          </ul>
+          <!--user info-->
+          <div id="tab-1" class="tab-content current">
+            <h2>user_info</h2>
+            <h3>ID : <%= user_name%></h3>
+            <h3>session : <%= session%></h3>
+            <h3>email : email@email.com</h3>
+          </div>
+
+          <!--wallet info-->
+          <div id="tab-2" class="tab-content">
+            <!--check is wallet-->
+            <% if(pri_key=='none') {%>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="/wallet">Wallet Generate</a>
+            <% } %>
+            <br />
+            <h2>
+              <%= coin %>
+            </h2>
+            <label>private key:</label>
+            <textarea name="pri_key" id="pri_key" rows="10" class="form-control" readonly><%= pri_key %></textarea>
+            <br />
+            <label>public key:</label>
+            <textarea name="pub_key" id="pub_key" rows="5" class="form-control" readonly><%= pub_key%></textarea>
+          </div>
+          <!--my transactions-->
+          <div id="tab-3" class="tab-content">
+            ---- ★-- -------- ---- ---- ---- -★- ---- ---- -------- ---- -★- ---- ---- ---- ---- -------- ---- ---- ---- ---- ---- --★ -------- ★-- ---- ---- ---- ---- ---- -------- ---- ---- --★ ---- ---- ---- -------- ---- ---- ---- --★
+          </div>
+
+
         </div>
       </div>
     </div>

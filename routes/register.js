@@ -37,6 +37,7 @@ router.post('/', function(req, res) {
   }, function(error, response, body) {
     // res_data in body (rcode,rmessage)
     var res_data = JSON.parse(body);
+    var session = req.session.logined;
 
     if (!error && response.statusCode == 200) {
       if (res_data.rcode == 'ok') {
@@ -49,7 +50,8 @@ router.post('/', function(req, res) {
         console.log("<--- log from : /reg");
         console.log(res_data.rmessage);
         res.render('register', {
-          title: res_data.rmessage
+          title: res_data.rmessage,
+          session : session
         });
       }
     } else if (error) {
